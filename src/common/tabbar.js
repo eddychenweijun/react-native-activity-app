@@ -52,20 +52,19 @@ var TabBar = React.createClass({
                     selected={this.state.selectedTab === 'greenTab'}
                     onPress={() => {this.setState({abc: 'greenTab',presses: this.state.presses + 1});}}
                 >
-
+                {this._renderContent('#21551C', 'Green Tab')}
                 </TabBarIOS.Item>
             </TabBarIOS>
         );
     },
 
     _renderContent: function(color: string, pageText: string) {
-        return (<LoginView/>);
-        //return (
-        //    <View style={[styles.tabContent, {backgroundColor: color}]}>
-        //        <Text style={styles.tabText}>{pageText}</Text>
-        //        <Text style={styles.tabText}>{this.state.presses} re-renders of the More tab</Text>
-        //    </View>
-        //);
+        return (
+            <View style={[styles.tabContent, {backgroundColor: color}]}>
+                <Text style={styles.tabText}>{pageText}</Text>
+                <Text style={styles.tabText}>{this.state.presses} re-renders of the More tab</Text>
+            </View>
+        );
     },
 });
 var styles = StyleSheet.create({

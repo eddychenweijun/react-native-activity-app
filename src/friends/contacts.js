@@ -20,7 +20,7 @@ var ContactsView = React.createClass({
                 initialRoute={{title: 'Contacts',component: ContactListView}}
             />
         )
-        return <ContactListView/>;
+        //return <ContactListView/>;
     },
 
 });
